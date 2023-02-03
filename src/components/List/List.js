@@ -12,23 +12,22 @@ function List() {
       })
         .then((response) => response.json())
         .then((response) => {
-          console.log("response of fetchBreweries", response);
           setBreweries(response);
         });
     };
     fetchBreweries();
   }, []);
-  console.log("state of breweries", breweries);
 
   const addBrewery = (newBrewery) => {
     setBreweries([...breweries, newBrewery]);
   };
 
   const updateBrewery = (updatedBrewery) => {
-    console.log("updating brewery", updatedBrewery);
     setBreweries(
       breweries.map((brewery) =>
-        brewery.id === updatedBrewery.id ? {...brewery, ...updatedBrewery} : brewery
+        brewery.id === updatedBrewery.id
+          ? { ...brewery, ...updatedBrewery }
+          : brewery
       )
     );
   };
@@ -39,7 +38,7 @@ function List() {
 
   return (
     <>
-      <ul>
+      <ul className="list-none">
         {breweries.length > 0
           ? breweries.map((item, index) => {
               return (
@@ -53,7 +52,18 @@ function List() {
             })
           : "No results"}
       </ul>
-      <button onClick={() => addBrewery({ id: uuidv4(), name: "New Brewery" })}>
+      <button
+        className="block mx-auto bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded m-5"
+        onClick={() =>
+          addBrewery({
+            id: uuidv4(),
+            name: "New Brewery",
+            brewery_type: "Example Type",
+            city: "Example City",
+            state: "Example State",
+          })
+        }
+      >
         Add Brewery
       </button>
     </>
