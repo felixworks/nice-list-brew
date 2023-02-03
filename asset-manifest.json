@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nice-list-brew/static/css/main.a7c0511d.css",
+    "main.js": "/nice-list-brew/static/js/main.f8463cdd.js",
+    "static/js/787.09b3ca9e.chunk.js": "/nice-list-brew/static/js/787.09b3ca9e.chunk.js",
+    "index.html": "/nice-list-brew/index.html",
+    "main.a7c0511d.css.map": "/nice-list-brew/static/css/main.a7c0511d.css.map",
+    "main.f8463cdd.js.map": "/nice-list-brew/static/js/main.f8463cdd.js.map",
+    "787.09b3ca9e.chunk.js.map": "/nice-list-brew/static/js/787.09b3ca9e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7c0511d.css",
+    "static/js/main.f8463cdd.js"
+  ]
+}
